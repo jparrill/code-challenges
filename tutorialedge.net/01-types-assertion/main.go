@@ -1,3 +1,10 @@
+/*
+Challenge
+In this challenge, we are going to define a function that is called GetDeveloper which will take in 2 interface{} arguments.
+
+Within this function, you will have to declare a new Developer instance and use type assertion to populate the values correctly before then returning this new Developer instance.
+*/
+
 package main
 
 import (
