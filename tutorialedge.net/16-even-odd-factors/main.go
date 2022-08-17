@@ -37,11 +37,13 @@ func CheckFactors(num int) []int {
 
 func main() {
 	fmt.Println("Odd or Even Factors")
-
 	numFactors := OddEvenFactors(23)
-	fmt.Println(numFactors)     // "even"
-	fmt.Println("------------") // "even"
-
+	fmt.Println("Result: ", numFactors)
+	fmt.Println("------------")
+	numFactors = OddEvenFactors(24)
+	fmt.Println("Result: ", numFactors)
+	fmt.Println("------------")
 	numFactors = OddEvenFactors(36)
-	fmt.Println(numFactors) // "odd"
+	fmt.Println("Result: ", numFactors)
+	fmt.Println("------------")
 }
