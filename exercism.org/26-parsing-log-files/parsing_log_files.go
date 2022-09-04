@@ -58,9 +58,18 @@ func RemoveEndOfLineText(text string) string {
 	re := regexp.MustCompile(`end-of-line\d+\s*?`)
     txt := re.ReplaceAllString(text,"")
     return txt
-    
 }
 
 func TagWithUserName(lines []string) []string {
-	panic("Please implement the TagWithUserName function")
+    var xs []string
+	re := regexp.MustCompile(`User\s+(\w+)`)
+    for _,k := range lines {
+    	if user := re.FindStringSubmatch(k); user != nil {
+        	xs = append(xs, fmt.Sprintf("[USR] %s %s", user[1], k))    
+        } else {
+        	xs = append(xs,k)
+        }
+        
+    }
+    return xs
 }
